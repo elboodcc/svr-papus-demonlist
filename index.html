@@ -5,7 +5,1337 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INSANITOS DEMON LIST</title>
+  <!-- Font Awesome para íconos --><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSANITOS DEMON LIST</title>
   <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #0b0c10;
+      --card-bg: #12141d;
+      --border-color: #1f2430;
+      --accent-purple: #8a2be2;
+      --accent-glow: #a855f7;
+      --accent-cyan: #00d2ff;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAV BAR */
+    header {
+      background: rgba(18, 20, 29, 0.95);
+      border-bottom: 2px solid var(--accent-purple);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      color: var(--accent-glow);
+      text-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--accent-glow);
+      text-shadow: 0 0 8px var(--accent-glow);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1300px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 25px;
+      width: 100%;
+    }
+
+    /* TOP #1 FEATURED SECTION */
+    .featured-card {
+      background: linear-gradient(135deg, #161925 0%, #0d0f17 100%);
+      border: 1px solid var(--accent-purple);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 25px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(138, 43, 226, 0.15);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent-glow);
+      text-shadow: 0 0 15px var(--accent-glow);
+      z-index: 2;
+    }
+
+    .featured-img {
+      width: 50%;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--border-color);
+    }
+
+    .featured-info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background: rgba(138, 43, 226, 0.2);
+      border: 1px solid var(--accent-purple);
+      color: var(--accent-glow);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 1.1rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+    }
+
+    .info-item i {
+      color: var(--accent-glow);
+      width: 20px;
+    }
+
+    /* MAIN TABLE */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    .demon-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .demon-table th {
+      text-align: left;
+      padding: 12px;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .demon-table tr.level-row {
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .demon-table tr.level-row:hover {
+      background: rgba(138, 43, 226, 0.1);
+    }
+
+    .demon-table td {
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      vertical-align: middle;
+    }
+
+    .rank {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent-glow);
+    }
+
+    .level-cell {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .level-thumb {
+      width: 80px;
+      height: 45px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .level-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .creator-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .play-btn {
+      color: var(--accent-glow);
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.2);
+    }
+
+    /* --- ESTILOS DE LA SECCIÓN DE RECORDS DESPLEGABLE --- */
+    .records-row {
+      display: none;
+      background: rgba(11, 12, 16, 0.8);
+    }
+
+    .records-row.active {
+      display: table-row;
+    }
+
+    .records-container {
+      padding: 20px;
+      background: rgba(18, 20, 29, 0.95);
+      border: 1px solid rgba(138, 43, 226, 0.4);
+      border-radius: 8px;
+      margin: 10px 0;
+      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .records-header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .records-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .records-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .highlight-percent {
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    .records-stats {
+      font-size: 0.85rem;
+      color: #6c7293;
+      margin-top: 2px;
+    }
+
+    .records-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .records-table thead tr {
+      background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
+    }
+
+    .records-table th {
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      border: none;
+    }
+
+    .records-table tbody tr {
+      background: rgba(22, 26, 38, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .records-table tbody tr:hover {
+      background: rgba(138, 43, 226, 0.15);
+    }
+
+    .records-table td {
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      border: none;
+    }
+
+    .player-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .player-name {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .progress-cell {
+      font-weight: 700;
+      color: #ffb703;
+    }
+
+    .progress-cell.completed {
+      color: #00f5d4;
+      text-shadow: 0 0 8px rgba(0, 245, 212, 0.4);
+    }
+
+    .proof-link {
+      color: #3a86ff;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s ease;
+    }
+
+    .proof-link:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .discord-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #5865F2;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .discord-btn:hover {
+      background: #4752C4;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .step-num {
+      background: var(--accent-purple);
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: auto;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border-color);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .featured-card {
+        flex-direction: column;
+      }
+      .featured-img, .featured-info {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-cube"></i> INSANITOS <span>DEMON LIST</span>
+    </div>
+    <nav>
+      <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#"><i class="fa-solid fa-list-ol"></i> Lista Principal</a>
+      <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Legacy</a>
+      <a href="#"><i class="fa-solid fa-globe"></i> Países</a>
+    </nav>
+  </header>
+
+  <!-- CONTENT CONTAINER -->
+  <div class="container">
+    
+    <!-- MAIN COLUMN -->
+    <main>
+      
+<!-- TOP #1 FEATURED CARD (ACROPOLIS) -->
+<div class="featured-card">
+  <div class="featured-badge">#1</div>
+  <img class="featured-img" src="imgs/acropolis.jpg" alt="Acropolis">
+  <div class="featured-info">
+    <h1 class="featured-title">ACROPOLIS</h1>
+    <div class="tags">
+      <span class="tag">Extreme Demon</span>
+      <span class="tag">Rated</span>
+    </div>
+    <div class="info-list">
+      <div class="info-item">
+        <i class="fa-solid fa-user"></i>
+        <span><strong>Creador:</strong> Zobros</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-circle-check"></i>
+        <span><strong>Verificado por:</strong> SewaxZ <i class="fa-solid fa-shield-halved" style="color: var(--accent-glow);"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN TABLE -->
+<div class="table-container">
+  <div class="section-title">
+    <i class="fa-solid fa-trophy" style="color: gold;"></i> LISTA PRINCIPAL
+  </div>
+
+  <table class="demon-table">
+    <thead>
+      <tr>
+        <th>POS</th>
+        <th>NIVEL</th>
+        <th>CREADOR</th>
+        <th>VERIFICADO POR</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- TOP 1: ACROPOLIS -->
+      <tr class="level-row" onclick="toggleRecords('rec-1')">
+        <td class="rank">1</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/acropolis.jpg" alt="thumb">
+            <div>
+              <div class="level-name">ACROPOLIS</div>
+              <span class="tag" style="font-size: 0.65rem;">Extreme Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Zobros</div></td>
+        <td>SewaxZ <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-1" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header">
+              <h3 class="records-title">Records</h3>
+              <p class="records-subtitle"><span class="highlight-percent">50%</span> or better required to qualify</p>
+            </div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 2 -->
+      <tr class="level-row" onclick="toggleRecords('rec-2')">
+        <td class="rank">2</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/maxresdefault (1).jpg" alt="thumb">
+            <div>
+              <div class="level-name">WINDY LANDSCAPE</div>
+              <span class="tag" style="font-size: 0.65rem;">Insane Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">WOOGI1411</div></td>
+        <td>05juanes92 <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-2" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">05juanes92 (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 3 -->
+      <tr class="level-row" onclick="toggleRecords('rec-3')">
+        <td class="rank">3</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/maxresdefault_1.jpg" alt="thumb">
+            <div>
+              <div class="level-name">FOREST TEMPLE</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Michigun</div></td>
+        <td>Clippedby40x <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-3" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Clippedby40x (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">SewaxZ (1st Victor)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 4 -->
+      <tr class="level-row" onclick="toggleRecords('rec-4')">
+        <td class="rank">4</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/futurepunk.jpg" alt="thumb">
+            <div>
+              <div class="level-name">FUTURE FUNK</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">JonathanGD</div></td>
+        <td>Clipped <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-4" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Clipped (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 5 -->
+      <tr class="level-row" onclick="toggleRecords('rec-5')">
+        <td class="rank">5</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/diferenteacento.jpg" alt="thumb">
+            <div>
+              <div class="level-name">ARTIFICIAL ASCENT</div>
+              <span class="tag" style="font-size: 0.65rem;">Extreme Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Viprin</div></td>
+        <td>05juanes92 <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-5" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">05juanes92 (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 6 -->
+      <tr class="level-row" onclick="toggleRecords('rec-6')">
+        <td class="rank">6</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/hq720_2.jpg" alt="thumb">
+            <div>
+              <div class="level-name">NINE CIRCLES</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Zobros</div></td>
+        <td>05juanes92 <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-6" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">05juanes92 (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">SewaxZ (1st Victor)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 7 -->
+      <tr class="level-row" onclick="toggleRecords('rec-7')">
+        <td class="rank">7</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/discomania.jpg" alt="thumb">
+            <div>
+              <div class="level-name">DISCO MANÍA</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">nikverr</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-7" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 8 -->
+      <tr class="level-row" onclick="toggleRecords('rec-8')">
+        <td class="rank">8</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/probabledemonio.jpg" alt="thumb">
+            <div>
+              <div class="level-name">PROBABLY DEMON</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Anky Tv</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-8" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 9 -->
+      <tr class="level-row" onclick="toggleRecords('rec-9')">
+        <td class="rank">9</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/hq720_1.jpg" alt="thumb">
+            <div>
+              <div class="level-name">CRAZY</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">DavJT</div></td>
+        <td>Clipped <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-9" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Clipped (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 10 -->
+      <tr class="level-row" onclick="toggleRecords('rec-10')">
+        <td class="rank">10</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/maxresdefault.jpg" alt="thumb">
+            <div>
+              <div class="level-name">TROLL MADNESS</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">zyphur</div></td>
+        <td>Uke (SewaxZ) <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-10" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Uke / SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 11 -->
+      <tr class="level-row" onclick="toggleRecords('rec-11')">
+        <td class="rank">11</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/denonmet.jpg" alt="thumb">
+            <div>
+              <div class="level-name">DENOUEMENT</div>
+              <span class="tag" style="font-size: 0.65rem;">Insane Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Synactive GD</div></td>
+        <td>Uke (SewaxZ) <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-11" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Uke / SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 12 -->
+      <tr class="level-row" onclick="toggleRecords('rec-12')">
+        <td class="rank">12</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/atreans.jpg" alt="thumb">
+            <div>
+              <div class="level-name">ASTREANS</div>
+              <span class="tag" style="font-size: 0.65rem;">Hard Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Xenon</div></td>
+        <td>05juanes92 <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-12" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">05juanes92 (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 13 -->
+      <tr class="level-row" onclick="toggleRecords('rec-13')">
+        <td class="rank">13</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/tecnopun.jpg" alt="thumb">
+            <div>
+              <div class="level-name">TECHNO PUNK</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Anky Tv</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-13" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 14 -->
+      <tr class="level-row" onclick="toggleRecords('rec-14')">
+        <td class="rank">14</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/sakupen egg.jpg" alt="thumb">
+            <div>
+              <div class="level-name">SAKUPEN EGG</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Siv25</div></td>
+        <td>Uke (SewaxZ) <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-14" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Uke / SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 15 -->
+      <tr class="level-row" onclick="toggleRecords('rec-15')">
+        <td class="rank">15</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/nantendo.jpg" alt="thumb">
+            <div>
+              <div class="level-name">NANTENDO</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">ImGamer</div></td>
+        <td>Clipped <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-15" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Clipped (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 16 -->
+      <tr class="level-row" onclick="toggleRecords('rec-16')">
+        <td class="rank">16</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/partacosdmaskldmaskldn.jpg" alt="thumb">
+            <div>
+              <div class="level-name">PARACOSM CIRCLES</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">R3XIX</div></td>
+        <td>05juanes92 <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-16" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">05juanes92 (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 17 -->
+      <tr class="level-row" onclick="toggleRecords('rec-17')">
+        <td class="rank">17</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/ride.jpg" alt="thumb">
+            <div>
+              <div class="level-name">RIDE</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">endlevel</div></td>
+        <td>Clipped <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-17" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Clipped (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 18 -->
+      <tr class="level-row" onclick="toggleRecords('rec-18')">
+        <td class="rank">18</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/solar circles.jpg" alt="thumb">
+            <div>
+              <div class="level-name">SOLAR CIRCLES</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">D4rk Grif</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-18" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 19 -->
+      <tr class="level-row" onclick="toggleRecords('rec-19')">
+        <td class="rank">19</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/Captura de pantalla 2026-10-16 215336.png" alt="thumb">
+            <div>
+              <div class="level-name">LOVESHOT</div>
+              <span class="tag" style="font-size: 0.65rem;">Non Rated Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">V90</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-19" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 20 -->
+      <tr class="level-row" onclick="toggleRecords('rec-20')">
+        <td class="rank">20</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/cuarto win.jpg" alt="thumb">
+            <div>
+              <div class="level-name">QUARTZ WINDS</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">KrmaL</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-20" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 21 -->
+      <tr class="level-row" onclick="toggleRecords('rec-21')">
+        <td class="rank">21</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/velove.jpg" alt="thumb">
+            <div>
+              <div class="level-name">B</div>
+              <span class="tag" style="font-size: 0.65rem;">Medium Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Motleyorc</div></td>
+        <td>Uke (SewaxZ) <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-21" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Uke / SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 22 -->
+      <tr class="level-row" onclick="toggleRecords('rec-22')">
+        <td class="rank">22</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/Captura de pantalla 2026-10-12 113841.png" alt="thumb">
+            <div>
+              <div class="level-name">666</div>
+              <span class="tag" style="font-size: 0.65rem;">Easy Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Anky Tv</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-22" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 23 -->
+      <tr class="level-row" onclick="toggleRecords('rec-23')">
+        <td class="rank">23</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/retrp.jpg" alt="thumb">
+            <div>
+              <div class="level-name">RETRO CIRCLES</div>
+              <span class="tag" style="font-size: 0.65rem;">Easy Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">TobyAdd</div></td>
+        <td>Uke (SewaxZ) <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-23" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Uke / SewaxZ (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 24 -->
+      <tr class="level-row" onclick="toggleRecords('rec-24')">
+        <td class="rank">24</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/hypernigga.jpg" alt="thumb">
+            <div>
+              <div class="level-name">HYPERVOID</div>
+              <span class="tag" style="font-size: 0.65rem;">Easy Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Anky Tv</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-24" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <!-- TOP 25 -->
+      <tr class="level-row" onclick="toggleRecords('rec-25')">
+        <td class="rank">25</td>
+        <td>
+          <div class="level-cell">
+            <img class="level-thumb" src="imgs/cyber punkas.jpg" alt="thumb">
+            <div>
+              <div class="level-name">CYBER DRIFT</div>
+              <span class="tag" style="font-size: 0.65rem;">Easy Demon</span>
+            </div>
+          </div>
+        </td>
+        <td><div class="creator-info">Anky Tv</div></td>
+        <td>Anky Tv <i class="fa-solid fa-check" style="color: var(--accent-glow);"></i></td>
+        <td><a href="javascript:void(0)" class="play-btn"><i class="fa-solid fa-chevron-down"></i></a></td>
+      </tr>
+      <tr id="rec-25" class="records-row">
+        <td colspan="5">
+          <div class="records-container">
+            <div class="records-header"><h3 class="records-title">Records</h3></div>
+            <table class="records-table">
+              <thead><tr><th>Record Holder</th><th>Progress</th><th>Video Proof</th></tr></thead>
+              <tbody>
+                <tr><td class="player-cell">🇨🇴 <span class="player-name">Anky Tv (Verifier)</span></td><td class="progress-cell completed">100%</td><td><a href="https://youtube.com" target="_blank" class="proof-link">YouTube <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+    </aside>
+
+  </div>
+
+</section>
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 SVR PAPUS DEMON LIST. Todos los derechos reservados.
+  </footer>
+
+  <!-- SCRIPT DE DESPLIEGUE -->
+  <script>
+    function toggleRecords(id) {
+      const targetRow = document.getElementById(id);
+      
+      // Cierra los demás abiertos
+      document.querySelectorAll('.records-row').forEach(row => {
+        if (row.id !== id) {
+          row.classList.remove('active');
+        }
+      });
+
+      // Alterna el actual
+      targetRow.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
